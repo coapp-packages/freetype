@@ -1,5 +1,5 @@
 #product-info  {
-    product-name: "mpir";
+    product-name: "freetype";
     version: "2.4.2";
     original-source-location: "http://ftp.gnome.org/pub/gnome/binaries/win32/dependencies/freetype-2.4.2.tar.bz2";
     original-source-website: "http://www.freetype.org/";
