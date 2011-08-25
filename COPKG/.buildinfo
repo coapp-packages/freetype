@@ -12,8 +12,7 @@ Win32 {
  
     targets: { 
         // libraries
-        "objs\win32\vc2010\freetype246.lib",
-        "objs\win32\vc2010\freetype246_D.lib"
+        "objs\win32\vc2010\freetype246.lib"
 } ;
  
     build-command: @"devenv /build release .\builds\win32\vc2010\freetype.sln";
