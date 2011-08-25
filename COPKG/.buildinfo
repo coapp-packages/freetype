@@ -1,0 +1,30 @@
+#product-info  {
+    product-name: "mpir";
+    version: "2.4.2";
+    original-source-location: "http://ftp.gnome.org/pub/gnome/binaries/win32/dependencies/freetype-2.4.2.tar.bz2";
+    original-source-website: "http://www.freetype.org/";
+    license: "GNU GENERAL PUBLIC LICENSE Version 2, June 1991 or The FreeType Project LICENSE";
+    packager: "Jonny Best <mail@jonathanbest.de>";
+}
+
+Win32 {
+    compiler: vc10-x86;
+ 
+    targets: { 
+        // libraries
+        "objs\win32\vc2010\freetype246.lib",
+        "objs\win32\vc2010\freetype246_D.lib"
+} ;
+ 
+    build-command: @"devenv /build release .\builds\win32\vc2010\freetype.sln";
+ 
+    clean-command: @"            
+            attrib -S -H -R *
+            
+            del /S *.user *.suo *.sdf
+                        
+            del builds\win32\vc2010\freetype.opensdf 2>NUL           
+            rmdir /S /Q objs\release 2>NUL
+            rmdir /S /Q objs\win32 2>NUL
+    "; 
+}
