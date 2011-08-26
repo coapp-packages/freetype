@@ -3,6 +3,7 @@
     version: "2.4.2";
     original-source-location: "http://ftp.gnome.org/pub/gnome/binaries/win32/dependencies/freetype-2.4.2.tar.bz2";
     original-source-website: "http://www.freetype.org/";
+    original-source-repository: "git://git.sv.nongnu.org/freetype/freetype2.git";
     license: "GNU GENERAL PUBLIC LICENSE Version 2, June 1991 or The FreeType Project LICENSE";
     packager: "Jonny Best <mail@jonathanbest.de>";
 }
