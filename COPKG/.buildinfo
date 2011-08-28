@@ -9,14 +9,14 @@
 }
 
 Win32 {
-    compiler: vc10-x86;
+    compiler: sdk7.1;
  
     targets: { 
         // libraries
         "objs\win32\vc2010\freetype246.lib"
 } ;
  
-    build-command: @"devenv /build release .\builds\win32\vc2010\freetype.sln";
+    build-command: @"msbuild .\builds\win32\vc2010\freetype.vcxproj /p:Configuration=Release";
  
     clean-command: @"            
             attrib -S -H -R *
