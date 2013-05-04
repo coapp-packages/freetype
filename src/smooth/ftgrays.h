@@ -42,7 +42,11 @@
   /* necessary to compile the library as a DLL.                            */
   /*                                                                       */
 #ifndef FT_EXPORT_VAR
+#ifdef FT_DLLEXPORTS
+#define FT_EXPORT_VAR( x )  extern __declspec(dllexport) x
+#else
 #define FT_EXPORT_VAR( x )  extern  x
+#endif
 #endif
 
   FT_EXPORT_VAR( const FT_Raster_Funcs )  ft_grays_raster;
