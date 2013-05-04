@@ -1,0 +1,120 @@
+@import @"version.inc";
+
+nuget {
+	nuspec {
+		id = freetype;
+		version : ${package-version};
+		title: freetype;
+		authors: {David Turner, Robert Wilhelm, Werner Lemberg, freetype contributors};
+		owners: {CoApp Project, Vincent Povirk};
+		licenseUrl: "http://www.freetype.org/license.html";
+		projectUrl: "http://github.com/coapp-packages/freetype";
+		iconUrl: "http://www.freetype.org/image/fond3.png";
+		requireLicenseAcceptance:false;
+		summary: "FreeType is a freely available software library to render fonts.";
+		description: @"FreeType is a freely available software library to render fonts.
+Homepage: http://www.freetype.org/index.html";
+		releaseNotes: "Release of freetype 2.4.2 libraries.";
+		copyright: Copyright 2013;
+		tags: { freetype, font, native, CoApp };
+
+	};
+
+	files {
+		include: {
+			..\include\**\*.h,
+			};
+
+		// FIXME: Cannot build docs yet
+
+		source += {
+			..\include\**\*.h,
+			..\src\**\*.c,
+		};
+
+		[Win32,v110,dynamic,release] {
+			lib: { ..\builds\win32\vc2010\Output\Win32\Release\v110\DynamicLibrary\freetype246.lib };
+			bin: { ..\builds\win32\vc2010\Output\Win32\Release\v110\DynamicLibrary\freetype246.dll };
+			symbols: { ..\builds\win32\vc2010\Output\Win32\Release\v110\DynamicLibrary\freetype246.pdb };
+		}
+    
+		[Win32,v100,dynamic,release] {
+			lib: { ..\builds\win32\vc2010\Output\Win32\Release\v100\DynamicLibrary\freetype246.lib };
+			bin: { ..\builds\win32\vc2010\Output\Win32\Release\v100\DynamicLibrary\freetype246.dll };
+			symbols: { ..\builds\win32\vc2010\Output\Win32\Release\v100\DynamicLibrary\freetype246.pdb };
+		}
+
+		[x64,v110,dynamic,release] {
+			lib: { ..\builds\win32\vc2010\Output\x64\Release\v110\DynamicLibrary\freetype246.lib };
+			bin: { ..\builds\win32\vc2010\Output\x64\Release\v110\DynamicLibrary\freetype246.dll };
+			symbols: { ..\builds\win32\vc2010\Output\x64\Release\v110\DynamicLibrary\freetype246.pdb };
+		}
+    
+		[x64,v100,dynamic,release] {
+			lib: { ..\builds\win32\vc2010\Output\x64\Release\v100\DynamicLibrary\freetype246.lib };
+			bin: { ..\builds\win32\vc2010\Output\x64\Release\v100\DynamicLibrary\freetype246.dll };
+			symbols: { ..\builds\win32\vc2010\Output\x64\Release\v100\DynamicLibrary\freetype246.pdb };
+		}
+
+		[Win32,v110,static,release] {
+			lib: { ..\builds\win32\vc2010\Output\Win32\Release\v110\StaticLibrary\freetype246.lib };
+		}
+    
+		[Win32,v100,static,release] {
+			lib: { ..\builds\win32\vc2010\Output\Win32\Release\v100\StaticLibrary\freetype246.lib };
+		}
+
+		[x64,v110,static,release] {
+			lib: { ..\builds\win32\vc2010\Output\x64\Release\v110\StaticLibrary\freetype246.lib };
+		}
+    
+		[x64,v100,static,release] {
+			lib: { ..\builds\win32\vc2010\Output\x64\Release\v100\StaticLibrary\freetype246.lib };
+		}
+
+		[Win32,v110,dynamic,debug] {
+			lib: { ..\builds\win32\vc2010\Output\Win32\Debug\v110\DynamicLibrary\freetype246_D.lib };
+			bin: { ..\builds\win32\vc2010\Output\Win32\Debug\v110\DynamicLibrary\freetype246_D.dll };
+			symbols: { ..\builds\win32\vc2010\Output\Win32\Debug\v110\DynamicLibrary\freetype246_D.pdb };
+		}
+    
+		[Win32,v100,dynamic,debug] {
+			lib: { ..\builds\win32\vc2010\Output\Win32\Debug\v100\DynamicLibrary\freetype246_D.lib };
+			bin: { ..\builds\win32\vc2010\Output\Win32\Debug\v100\DynamicLibrary\freetype246_D.dll };
+			symbols: { ..\builds\win32\vc2010\Output\Win32\Debug\v100\DynamicLibrary\freetype246_D.pdb };
+		}
+
+		[x64,v110,dynamic,debug] {
+			lib: { ..\builds\win32\vc2010\Output\x64\Debug\v110\DynamicLibrary\freetype246_D.lib };
+			bin: { ..\builds\win32\vc2010\Output\x64\Debug\v110\DynamicLibrary\freetype246_D.dll };
+			symbols: { ..\builds\win32\vc2010\Output\x64\Debug\v110\DynamicLibrary\freetype246_D.pdb };
+		}
+    
+		[x64,v100,dynamic,debug] {
+			lib: { ..\builds\win32\vc2010\Output\x64\Debug\v100\DynamicLibrary\freetype246_D.lib };
+			bin: { ..\builds\win32\vc2010\Output\x64\Debug\v100\DynamicLibrary\freetype246_D.dll };
+			symbols: { ..\builds\win32\vc2010\Output\x64\Debug\v100\DynamicLibrary\freetype246_D.pdb };
+		}
+
+		[Win32,v110,static,debug] {
+			lib: { ..\builds\win32\vc2010\Output\Win32\Debug\v110\StaticLibrary\freetype246_D.lib };
+		}
+    
+		[Win32,v100,static,debug] {
+			lib: { ..\builds\win32\vc2010\Output\Win32\Debug\v100\StaticLibrary\freetype246_D.lib };
+		}
+
+		[x64,v110,static,debug] {
+			lib: { ..\builds\win32\vc2010\Output\x64\Debug\v110\StaticLibrary\freetype246_D.lib };
+		}
+    
+		[x64,v100,static,debug] {
+			lib: { ..\builds\win32\vc2010\Output\x64\Debug\v100\StaticLibrary\freetype246_D.lib };
+		}
+	};
+
+	targets {
+		Defines += HAS_FREETYPE;
+	};
+}
+
