@@ -59,8 +59,8 @@ if "__NOCLEAN__"=="true" goto :eof
 goto :clean
 
 :build
-msbuild /P:Platform=%1 /P:Configuration=%2 /P:PlatformToolset=%3 /P:ConfigurationType=DynamicLibrary ..\builds\win32\vc2010\freetype.vcxproj
-msbuild /P:Platform=%1 /P:Configuration=%2 /P:PlatformToolset=%3 /P:ConfigurationType=StaticLibrary ..\builds\win32\vc2010\freetype.vcxproj
+msbuild /P:Platform=%1 /P:Configuration=%2 /P:PlatformToolset=%3 /P:ConfigurationType=DynamicLibrary ..\builds\windows\vc2010\freetype.vcxproj
+msbuild /P:Platform=%1 /P:Configuration=%2 /P:PlatformToolset=%3 /P:ConfigurationType=StaticLibrary ..\builds\windows\vc2010\freetype.vcxproj
 goto :eof
 
 :clean
