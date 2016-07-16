@@ -24,7 +24,7 @@ nuget {
 		summary: "FreeType is a freely available software library to render fonts.";
 		description: @"FreeType is a freely available software library to render fonts.
 Homepage: http://www.freetype.org/index.html";
-		releaseNotes: "Release of freetype 2.6.2 libraries.";
+		releaseNotes: "Release of freetype 2.6.5 libraries.";
 		copyright: Copyright 2006-2015;
 		tags: { freetype, font, native, CoApp, v140, v120, dynamic, static };
 
@@ -44,27 +44,27 @@ Homepage: http://www.freetype.org/index.html";
 		
 		("Win32,x64",${toolsets},dynamic,release) => {
 		    [${0},${1},${2},${3}] {
-    			bin: { ..\builds\windows\vc2010\Output\${0}\${3}\${1}\${2}Library\freetype262.dll };
-    			symbols: { ..\builds\windows\vc2010\Output\${0}\${3}\${1}\${2}Library\freetype262.pdb };
+    			bin: { ..\builds\windows\vc2010\Output\${0}\${3}\${1}\${2}Library\freetype265.dll };
+    			symbols: { ..\builds\windows\vc2010\Output\${0}\${3}\${1}\${2}Library\freetype265.pdb };
 			};
 		};
 		
 		("Win32,x64",${toolsets},dynamic,debug) => {
 		    [${0},${1},${2},${3}] {
-    			bin: { ..\builds\windows\vc2010\Output\${0}\${3}\${1}\${2}Library\freetype262d.dll };
-    			symbols: { ..\builds\windows\vc2010\Output\${0}\${3}\${1}\${2}Library\freetype262d.pdb };
+    			bin: { ..\builds\windows\vc2010\Output\${0}\${3}\${1}\${2}Library\freetype265d.dll };
+    			symbols: { ..\builds\windows\vc2010\Output\${0}\${3}\${1}\${2}Library\freetype265d.pdb };
 			};
 		};
 
 		("Win32,x64",${toolsets},"static,dynamic",release) => {
 		    [${0},${1},${2},${3}] {
-			    lib: { ..\builds\windows\vc2010\Output\${0}\${3}\${1}\${2}Library\freetype262.lib };
+			    lib: { ..\builds\windows\vc2010\Output\${0}\${3}\${1}\${2}Library\freetype265.lib };
 		    };
 		};
 
 		("Win32,x64",${toolsets},"static,dynamic",debug) => {
 		    [${0},${1},${2},${3}] {
-			    lib: { ..\builds\windows\vc2010\Output\${0}\${3}\${1}\${2}Library\freetype262d.lib };
+			    lib: { ..\builds\windows\vc2010\Output\${0}\${3}\${1}\${2}Library\freetype265d.lib };
 		    };
 		};
 	};
