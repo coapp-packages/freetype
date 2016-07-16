@@ -16,14 +16,6 @@ call :build x64 Release v120
 call :build x64 Debug v120
 call :build Win32 Release v120
 call :build Win32 Debug v120
-call :build x64 Release v110
-call :build x64 Debug v110
-call :build Win32 Release v110
-call :build Win32 Debug v110
-call :build x64 Release v100
-call :build x64 Debug v100
-call :build Win32 Release v100
-call :build Win32 Debug v100
 endlocal
 
 if "__NOCLEAN__"=="true" goto :eof

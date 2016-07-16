@@ -1,6 +1,6 @@
 @import @"version.inc";
 
-#define { toolsets: "v100,v110,v120,v140"; }
+#define { toolsets: "v120,v140"; }
 
 configurations {
 	UserPlatformToolset {
@@ -26,7 +26,7 @@ nuget {
 Homepage: http://www.freetype.org/index.html";
 		releaseNotes: "Release of freetype 2.6.2 libraries.";
 		copyright: Copyright 2006-2015;
-		tags: { freetype, font, native, CoApp, v140, v120, v110, v100, dynamic, static };
+		tags: { freetype, font, native, CoApp, v140, v120, dynamic, static };
 
 	};
 
