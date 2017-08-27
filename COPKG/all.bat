@@ -7,7 +7,13 @@ if "%1"=="noclean" (
 	shift)
 
 setlocal
-call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x86
+set SERIOUSLYWTF="%cd%"
+call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" x86
+cd "%SERIOUSLYWTF%"
+call :build x64 Release v141
+call :build x64 Debug v141
+call :build Win32 Release v141
+call :build Win32 Debug v141
 call :build x64 Release v140
 call :build x64 Debug v140
 call :build Win32 Release v140
